@@ -5,9 +5,9 @@ import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 
 public class MainActivity extends AppCompatActivity {
-
     CardView doctorCard, aboutCard, locationCard, scheduleCard;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

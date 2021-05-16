@@ -24,6 +24,8 @@
         android:columnCount="2"
         android:layout_marginTop="225sp">
 
+
+
         <androidx.cardview.widget.CardView
             android:id="@+id/doctorCard"
             android:layout_gravity="fill"
@@ -85,6 +87,7 @@
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
             android:id="@+id/locationCard"
             android:layout_gravity="fill"

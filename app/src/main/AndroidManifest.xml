@@ -9,14 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Hosplus">
-        <activity android:name=".AboutUs"
-            android:parentActivityName=".MainActivity" />
-        <activity android:name=".Location"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".Schedule"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".DoctorsList"
-            android:parentActivityName=".MainActivity"/>
+
+        <activity
+            android:name=".AboutUs"
+            android:parentActivityName=".MainActivity"
+            android:label="About Us"/>
+        <activity
+            android:name=".Location"
+            android:parentActivityName=".MainActivity"
+            android:label="Location"/>
+        <activity
+            android:name=".Schedule"
+            android:parentActivityName=".MainActivity"
+            android:label="Schedule"/>
+        <activity
+            android:name=".DoctorsList"
+            android:parentActivityName=".MainActivity"
+            android:label="Doctors List"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
