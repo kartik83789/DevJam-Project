@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.hosplus">
-    
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -13,27 +13,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Hosplus">
+        <activity
+            android:name=".MainActivity"/>
 
-        <meta-data android:name="com.google.android.geo.API_KEY"
-            android:value="@string/map_key"/>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/map_key" />
 
         <activity
             android:name=".AboutUs"
-            android:parentActivityName=".MainActivity"
-            android:label="About Us"/>
+            android:label="About Us"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Location"
-            android:parentActivityName=".MainActivity"
-            android:label="Location"/>
+            android:label="Location"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Schedule"
-            android:parentActivityName=".MainActivity"
-            android:label="Schedule"/>
+            android:label="Schedule"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".DoctorsList"
-            android:parentActivityName=".MainActivity"
-            android:label="Doctors List"/>
-        <activity android:name=".MainActivity">
+            android:label="Doctors List"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".SplashScreen"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
