@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "106507162375",
+    "project_id": "devjam-project",
+    "storage_bucket": "devjam-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:106507162375:android:f25a5c8941d4a7e8ffaba2",
+        "android_client_info": {
+          "package_name": "com.example.hosplus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "106507162375-onamvsois72m2921cjk42tqvpdqra43g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRcNB6Ml6rnW0gw1T3IX6feRIvaH7-2aQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "106507162375-onamvsois72m2921cjk42tqvpdqra43g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
