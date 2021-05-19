@@ -31,6 +31,6 @@ public class Location extends AppCompatActivity implements OnMapReadyCallback {
 
         LatLng Hospital = new LatLng(29.514836, 76.907477);
         map.addMarker(new MarkerOptions().position((Hospital)).title("Hospital"));
-        map.moveCamera(CameraUpdateFactory.newLatLng(Hospital));
+        map.animateCamera(CameraUpdateFactory.newLatLngZoom(Hospital, 18));
     }
 }
