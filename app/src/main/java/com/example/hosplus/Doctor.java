@@ -3,7 +3,7 @@ package com.example.hosplus;
 public class Doctor {
     private String name, speciality, image;
 
-    public Doctor(String name, String speciality, String image) {
+    public Doctor(String image, String name, String speciality) {
         this.name = name;
         this.speciality = speciality;
         this.image = image;
