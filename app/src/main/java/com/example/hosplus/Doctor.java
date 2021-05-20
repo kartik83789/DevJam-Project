@@ -1,12 +1,14 @@
 package com.example.hosplus;
 
 public class Doctor {
-    private String name, speciality, image;
+    private String name, speciality, image, info;
+    public Doctor(){}        //Blind constructor
 
-    public Doctor(String image, String name, String speciality) {
+    public Doctor(String name, String speciality, String image, String info) {
         this.name = name;
         this.speciality = speciality;
         this.image = image;
+        this.info = info;
     }
 
     public String getName() {
@@ -31,5 +33,13 @@ public class Doctor {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public String getInfo() {
+        return info;
+    }
+
+    public void setInfo(String info) {
+        this.info = info;
     }
 }
