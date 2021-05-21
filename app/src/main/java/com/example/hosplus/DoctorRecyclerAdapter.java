@@ -31,6 +31,7 @@ public class DoctorRecyclerAdapter extends FirebaseRecyclerAdapter<Doctor,Doctor
     protected void onBindViewHolder(@NonNull @NotNull DoctorRecyclerAdapter.viewHolder holder, int position, @NonNull @NotNull Doctor model) {
         holder.doctorName.setText(model.getName());
         Picasso.get().load(model.getImage()).into(holder.doctorImage);
+        holder.doctorSpeciality.setText(model.getSpeciality());
 
         holder.doctorCard.setOnClickListener(v -> {
             Intent intent = new Intent(context, DoctorInfo.class);
@@ -38,6 +39,7 @@ public class DoctorRecyclerAdapter extends FirebaseRecyclerAdapter<Doctor,Doctor
             intent.putExtra("doctorImage", model.getImage());
             intent.putExtra("doctorSpeciality", model.getSpeciality());
             intent.putExtra("doctorInfo", model.getInfo());
+            intent.putExtra("doctorMail",model.getMail());
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(intent);
         });
@@ -56,7 +58,7 @@ public class DoctorRecyclerAdapter extends FirebaseRecyclerAdapter<Doctor,Doctor
     {
         //create reference for image,name
         ImageView doctorImage;
-        TextView doctorName;
+        TextView doctorName,doctorSpeciality;
         CardView doctorCard;
         public viewHolder(@NonNull @NotNull View itemView)
         {
@@ -64,6 +66,7 @@ public class DoctorRecyclerAdapter extends FirebaseRecyclerAdapter<Doctor,Doctor
             doctorCard = (CardView)itemView.findViewById(R.id.doctor_card);
             doctorImage = (ImageView)itemView.findViewById(R.id.doctor_image);
             doctorName = (TextView)itemView.findViewById(R.id.doctor_name);
+            doctorSpeciality = (TextView)itemView.findViewById(R.id.doctor_speciality);
         }
     }
 }
