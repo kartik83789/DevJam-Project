@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 
 public class MainActivity extends AppCompatActivity {
-    CardView doctorCard, aboutCard, locationCard, scheduleCard;
+    CardView doctorCard, aboutCard, locationCard, scheduleCard, medicineCard,ambulanceCard;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +20,10 @@ public class MainActivity extends AppCompatActivity {
         scheduleCard = findViewById(R.id.ScheduleCard);
         locationCard = findViewById(R.id.locationCard);
         aboutCard = findViewById(R.id.aboutCard);
+        medicineCard = findViewById(R.id.medicineCard);
+        ambulanceCard = findViewById(R.id.ambulanceCard);
+
+
 
         //creating intent for each card
 
@@ -37,6 +41,14 @@ public class MainActivity extends AppCompatActivity {
         });
         aboutCard.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), AboutUs.class);
+            startActivity(intent);
+        });
+        medicineCard.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), Medicine.class);
+            startActivity(intent);
+        });
+        ambulanceCard.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), Ambulance.class);
             startActivity(intent);
         });
 

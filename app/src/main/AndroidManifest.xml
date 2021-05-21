@@ -14,7 +14,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hosplus">
         <activity
-            android:name=".MainActivity"/>
+            android:name=".Ambulance"
+            android:label="Ambulance"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".DoctorInfo"
+            android:label="Doctors Info"
+            android:parentActivityName=".DoctorsList"/>
+        <activity
+            android:name=".Medicine"
+            android:label="Medicine"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".MainActivity" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

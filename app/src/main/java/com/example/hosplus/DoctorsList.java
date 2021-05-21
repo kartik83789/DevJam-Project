@@ -36,7 +36,7 @@ public class DoctorsList extends AppCompatActivity {
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("doctors"), Doctor.class)
                         .build();
 
-        doctorAdapter = new DoctorRecyclerAdapter(options);
+        doctorAdapter = new DoctorRecyclerAdapter(options,this);
 
         //setting recyclerview
         doctorList = (RecyclerView) findViewById(R.id.doctor_list);
