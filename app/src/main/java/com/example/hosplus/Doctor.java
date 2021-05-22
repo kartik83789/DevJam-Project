@@ -2,6 +2,7 @@ package com.example.hosplus;
 
 public class Doctor {
     private String name, speciality, image, info,mail;
+
     public Doctor(){}        //Blind constructor
 
     public Doctor(String name, String speciality, String image, String info, String mail) {

@@ -24,15 +24,37 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 
 public class Medicine extends AppCompatActivity {
+
     RecyclerView medicineList;
+    MedicineRecyclerAdapter medicineAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_medicine);
 
+        FirebaseRecyclerOptions<Medicines> options =
+                new FirebaseRecyclerOptions.Builder<Medicines>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("medicines"), Medicines.class)
+                        .build();
 
+        medicineAdapter = new MedicineRecyclerAdapter(options);
 
+        //setting recyclerview
+        medicineList = (RecyclerView) findViewById(R.id.medicine_list);
+        medicineList.setLayoutManager(new LinearLayoutManager(this));
 
+        medicineList.setAdapter(medicineAdapter);
+
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        medicineAdapter.startListening();
+    }
+    @Override
+    protected void onStop() {
+        super.onStop();
+        medicineAdapter.stopListening();
     }
 
 }
